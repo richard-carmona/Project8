@@ -10,13 +10,18 @@ namespace Project8
     {
         public enum PieceColor { empty, black, red};
 
+        public PieceColor[] grid = new PieceColor[6, 7];
+
         public PieceColor Turn { get; }
         
         public PieceColor GetColor(int x, int y)
         {
-            //if grid[x,y] is black 
-            return PieceColor.black;
-            PieceColor.
+            if([x,y] == PieceColor.black)
+            {
+                return PieceColor.black;
+                PieceColor.black;
+            } 
+            
         }
 
         public bool IsWinner(PieceColor player)
