@@ -34,6 +34,8 @@ namespace Project8
                     this.Controls.Add(pb);
                 }
             }
+
+
         }
 
         private void UxNewGame_Click(object sender, EventArgs e)

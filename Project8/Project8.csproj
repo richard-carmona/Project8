@@ -47,16 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
-    <Compile Include="Connect Four.cs">
+    <Compile Include="UserInterface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Connect Four.Designer.cs">
-      <DependentUpon>Connect Four.cs</DependentUpon>
+    <Compile Include="UserInterface.Designer.cs">
+      <DependentUpon>UserInterface.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Connect Four.resx">
-      <DependentUpon>Connect Four.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface.resx">
+      <DependentUpon>UserInterface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
