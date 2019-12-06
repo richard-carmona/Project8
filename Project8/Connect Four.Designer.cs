@@ -1,4 +1,4 @@
-﻿namespace Project9
+﻿namespace Project8
 {
     partial class ConnectFour
     {
@@ -44,8 +44,6 @@
             this.uxButton7 = new System.Windows.Forms.Button();
             this.uxLabel = new System.Windows.Forms.Label();
             this.uxNewGame = new System.Windows.Forms.Button();
-            this.uxPictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.uxPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // uxButton1
@@ -57,6 +55,10 @@
             this.uxButton1.TabIndex = 0;
             this.uxButton1.Text = "1";
             this.uxButton1.UseVisualStyleBackColor = true;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             // 
             // button2
             // 
@@ -192,20 +194,11 @@
             this.uxNewGame.UseVisualStyleBackColor = true;
             this.uxNewGame.Click += new System.EventHandler(this.UxNewGame_Click);
             // 
-            // uxPictureBox
-            // 
-            this.uxPictureBox.Location = new System.Drawing.Point(12, 72);
-            this.uxPictureBox.Name = "uxPictureBox";
-            this.uxPictureBox.Size = new System.Drawing.Size(521, 407);
-            this.uxPictureBox.TabIndex = 15;
-            this.uxPictureBox.TabStop = false;
-            // 
             // ConnectFour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 572);
-            this.Controls.Add(this.uxPictureBox);
             this.Controls.Add(this.uxNewGame);
             this.Controls.Add(this.uxLabel);
             this.Controls.Add(this.uxButton7);
@@ -224,7 +217,6 @@
             this.Name = "ConnectFour";
             this.Text = "Connect Four";
             this.Load += new System.EventHandler(this.ConnectFour_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.uxPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,7 +239,6 @@
         private System.Windows.Forms.Button uxButton7;
         private System.Windows.Forms.Label uxLabel;
         private System.Windows.Forms.Button uxNewGame;
-        private System.Windows.Forms.PictureBox uxPictureBox;
     }
 }
 

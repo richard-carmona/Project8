@@ -9,6 +9,7 @@ namespace Project8
     class Board
     {
         public PieceColor Turn { get; }
+        /*
         public PieceColor GetColor(int x, int y)
 
         public bool IsWinner(PieceColor player)
@@ -17,7 +18,7 @@ namespace Project8
 
         public void SwitchTurns()
 
-        public bool Move(int col)
+        public bool Move(int col)*/
 
     }
     public enum PieceColor { empty, red, black };
