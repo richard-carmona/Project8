@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project8
 {
-    public partial class Form1 : Form
+    public partial class ConnectFour : Form
     {
-        public Form1()
+        public ConnectFour()
         {
             InitializeComponent();
         }
