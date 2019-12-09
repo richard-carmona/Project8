@@ -19,6 +19,7 @@ namespace Project8
         public Board()
         {
             grid = new PieceColor[row, Column];
+            Turn = PieceColor.red;
 
             for(int i = 0; i <= row ; i++)
             {
@@ -29,7 +30,7 @@ namespace Project8
             }
     }
 
-        public PieceColor Turn { get { return Turn; } }
+        public PieceColor Turn { get; private set; }
         
         public PieceColor GetColor(int x, int y)
         {
