@@ -32,8 +32,11 @@ namespace Project8
                     pb.Size = new Size(50, 50);
                     pb.BorderStyle = BorderStyle.FixedSingle;
                     this.Controls.Add(pb);
+                    pb[0, 0].Image = Properties.Resources.redCircle;
                 }
             }
+
+            
 
 
         }
