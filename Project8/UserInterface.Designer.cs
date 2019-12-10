@@ -55,6 +55,7 @@
             this.uxButton1.TabIndex = 0;
             this.uxButton1.Text = "1";
             this.uxButton1.UseVisualStyleBackColor = true;
+            this.uxButton1.Click += new System.EventHandler(this.ClickColumn);
             // 
             // backgroundWorker1
             // 
@@ -123,6 +124,7 @@
             this.uxButton2.TabIndex = 7;
             this.uxButton2.Text = "2";
             this.uxButton2.UseVisualStyleBackColor = true;
+            this.uxButton2.Click += new System.EventHandler(this.ClickColumn);
             // 
             // uxButton3
             // 
@@ -133,6 +135,7 @@
             this.uxButton3.TabIndex = 8;
             this.uxButton3.Text = "3";
             this.uxButton3.UseVisualStyleBackColor = true;
+            this.uxButton3.Click += new System.EventHandler(this.ClickColumn);
             // 
             // uxButton4
             // 
@@ -143,6 +146,7 @@
             this.uxButton4.TabIndex = 9;
             this.uxButton4.Text = "4";
             this.uxButton4.UseVisualStyleBackColor = true;
+            this.uxButton4.Click += new System.EventHandler(this.ClickColumn);
             // 
             // uxButton5
             // 
@@ -153,6 +157,7 @@
             this.uxButton5.TabIndex = 10;
             this.uxButton5.Text = "5";
             this.uxButton5.UseVisualStyleBackColor = true;
+            this.uxButton5.Click += new System.EventHandler(this.ClickColumn);
             // 
             // uxButton6
             // 
@@ -163,6 +168,7 @@
             this.uxButton6.TabIndex = 11;
             this.uxButton6.Text = "6";
             this.uxButton6.UseVisualStyleBackColor = true;
+            this.uxButton6.Click += new System.EventHandler(this.ClickColumn);
             // 
             // uxButton7
             // 
@@ -173,6 +179,7 @@
             this.uxButton7.TabIndex = 12;
             this.uxButton7.Text = "7";
             this.uxButton7.UseVisualStyleBackColor = true;
+            this.uxButton7.Click += new System.EventHandler(this.ClickColumn);
             // 
             // uxLabel
             // 
