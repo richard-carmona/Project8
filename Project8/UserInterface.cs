@@ -63,6 +63,7 @@ namespace Project8
         private void ClickColumn(object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
+            box[i,j].Image = 
         }
 
         /// <summary>
@@ -72,6 +73,7 @@ namespace Project8
         /// <param name="e"></param>
         private void UxNewGame_Click(object sender, EventArgs e)
         {
+
 
         }
 

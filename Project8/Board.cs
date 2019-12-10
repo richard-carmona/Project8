@@ -7,31 +7,31 @@ using System.Threading.Tasks;
 namespace Project8
 { 
     /// <summary>
-    /// 
+    /// enum to holf the turns value
     /// </summary>
     public enum PieceColor { empty, black, red };
 
     /// <summary>
-    /// 
+    /// Class that has the rules for the board
     /// </summary>
     public class Board
     {
         /// <summary>
-        /// 
+        /// variable tp hold row value
         /// </summary>
         private const int row = 6;
         /// <summary>
-        /// 
+        /// variable to hold column value
         /// </summary>
         private const int Column = 7;
         /// <summary>
-        /// 
+        /// the array for board
         /// </summary>
         private PieceColor[,] grid;
         
 
         /// <summary>
-        /// 
+        /// Constructor for the class
         /// </summary>
         public Board()
         {
@@ -48,12 +48,12 @@ namespace Project8
     }
 
         /// <summary>
-        /// 
+        /// gets the value of the current turn field
         /// </summary>
         public PieceColor Turn { get; private set; }
-        
+
         /// <summary>
-        /// 
+        /// returns the value at position [x,y] in the field array
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
@@ -64,7 +64,7 @@ namespace Project8
         }
 
         /// <summary>
-        /// 
+        /// returns whether the given player has four in a row, column, or diagonal
         /// </summary>
         /// <param name="player"></param>
         /// <returns></returns>
@@ -118,7 +118,7 @@ namespace Project8
         }
 
         /// <summary>
-        /// 
+        /// returns whether the board is full
         /// </summary>
         /// <returns></returns>
         public bool CheckTie()
@@ -141,7 +141,7 @@ namespace Project8
         }
 
         /// <summary>
-        /// 
+        /// switches the turn field between (from red to black or black to red)
         /// </summary>
         public void SwitchTurns()
         {
@@ -152,7 +152,7 @@ namespace Project8
         }
 
         /// <summary>
-        /// 
+        /// Checks to see if the move was valid
         /// </summary>
         /// <param name="col"></param>
         /// <returns></returns>
@@ -169,7 +169,7 @@ namespace Project8
         }
 
         /// <summary>
-        /// 
+        /// drops a piece of the current turn color into the given column. Returns whether the move was successful
         /// </summary>
         /// <param name="col"></param>
         /// <returns></returns>
