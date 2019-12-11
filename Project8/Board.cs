@@ -76,71 +76,59 @@ namespace Project8
         {
             for (int i = 0; i < row; i++)
             {
-                for (int j = 0; j < Column; j++){ 
+                for (int j = 0; j < Column - 3; j++){ 
                 if (grid[i,j] == grid[i, j+1] && grid[i,j] == grid[i,j +2] && grid[i,j] == grid[i,j + 3] && grid[i,j] == player)
                 {
                 return true;
                 }
-            else
-                {
-                return false;
-                }
+            
                 }
             }
 
 
 
-            for (int j = 0; j < Column; j++)
+            for (int j = 0; j < Column ; j++)
             {
                 for (int i = 0; i < row - 3; i++)
                 {
-                    if (grid[i, j] == grid[i, j + 1] && grid[i, j] == grid[i, j + 2] && grid[i, j] == grid[i, j + 3] && grid[i, j] == player)
+                    if (grid[i, j] == grid[i +1, j] && grid[i, j] == grid[i + 2, j] && grid[i, j] == grid[i + 3, j] && grid[i, j] == player)
                     {
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    
                 }
             }
 
 
 
-            for (int i = 0; i < row; i++)
+            for (int i = 0; i < row - 3; i++)
             {
                 for (int j = 0; j < Column - 3; j++)
                 {
-                    if (grid[i, j] == grid[i, j + 1] && grid[i, j] == grid[i, j + 2] && grid[i, j] == grid[i, j + 3] && grid[i, j] == player)
+                    if (grid[i, j] == grid[i + 1, j + 1] && grid[i, j] == grid[i + 2, j + 2] && grid[i, j] == grid[i + 3, j + 3] && grid[i, j] == player)
                     {
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                   
                 }
             }
 
 
 
-            for (int i = 0; i < row; i++)
+            for (int i = row - 1; i < row - 3; i--)
             {
                 for (int j = 0; j < Column - 3; j++)
                 {
-                    if (grid[i, j] == grid[i, j + 1] && grid[i, j] == grid[i, j + 2] && grid[i, j] == grid[i, j + 3] && grid[i, j] == player)
+                    if (grid[i, j] == grid[i - 1, j + 1] && grid[i, j] == grid[i - 2, j + 2] && grid[i, j] == grid[i - 3, j + 3] && grid[i, j] == player)
                     {
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    
                 }
             }
 
-            return true;
-        }    //FIX ME
+            return false;
+        }    
 
         /// <summary>
         /// returns whether the board is full
@@ -211,6 +199,11 @@ namespace Project8
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="col"></param>
+        /// <returns></returns>
         private int getRow(int col)
         {
             for(int i = row - 1; i >= 0; i--)

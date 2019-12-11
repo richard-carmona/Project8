@@ -114,35 +114,50 @@ namespace Project8
                     }
 
                     //then switch the displayed turn.
-                
-                   
-        }
 
-        /// <summary>
-        /// Starts a new game. refreshes the board
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void UxNewGame_Click(object sender, EventArgs e)
-        {
-            Button clicked = (Button)sender;
-            for(int i = 0; i <= box.Length; i++)
-            {
-                for(int j = 0; j <= box.Length; j++)
-                {
-                    //clear the board and reset the current turn to red.
-                }
-            }
-        }
 
-        private void UxPictureBox_Click(object sender, EventArgs e)
-        {
+                        /*
+                         In column click event in GUI:
+                        Button clicked = (Button) sender;
+                        loop through your array of column buttons
+                        check if clicked equals columns[i]
+                        if it does, i is the column that was clicked
 
-        }
+                        call Move at that column (how to find it?)
+                        nested loop through all PictureBoxes
+                        call GetColor with i and j.
+                        if get back PieceColor.red
+                            set that PictureBox's Image Properties.Resources.redCircle
+                        set their image to be the right circle, 
+                        depending on the color from Board
+                        */
+}
 
-        private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
+/// <summary>
+/// Starts a new game. refreshes the board
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
+private void UxNewGame_Click(object sender, EventArgs e)
+{
+Button clicked = (Button)sender;
+for(int i = 0; i <= box.Length; i++)
+{
+    for(int j = 0; j <= box.Length; j++)
+    {
+        //clear the board and reset the current turn to red.
     }
+}
+}
+
+private void UxPictureBox_Click(object sender, EventArgs e)
+{
+
+}
+
+private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+{
+
+}
+}
 }
