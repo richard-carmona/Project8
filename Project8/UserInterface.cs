@@ -82,36 +82,48 @@ namespace Project8
         private void ClickColumn(object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
-          
-                    if (board.Move(Convert.ToInt32(clicked.Text)))//column is not full
+
+            int buttonIndex = -1;
+                    for(int i = 0; i < buttons.Length ; i++)
+                    {
+                          if(clicked == buttons[i])
+                        {
+                    buttonIndex = i;
+                        }      
+
+                    }
+                    if (board.Move(buttonIndex))//column is not full
                     {
                          //place a piece of the current color in the clicked column
                          
                     if(board.Turn == PieceColor.red)
                         {
-                            box[0, Convert.ToInt32(clicked.Text)].Image = Properties.Resources.redCircle;
+                            box[0, buttonIndex].Image = Properties.Resources.redCircle;
                         }
                     else
                         {
-                            box[0, Convert.ToInt32(clicked.Text)].Image = Properties.Resources.redCircle;
+                            box[0, buttonIndex].Image = Properties.Resources.redCircle;
                         }
 
 
-                        if (board.IsWinner)//Check to see if the recent move made the player win or tie
+                        if (board.IsWinner(board.Turn))//Check to see if the recent move made the player win or tie
                         {
-                            MessageBox.Show("wins!");
+                            MessageBox.Show(board.Turn + " wins!");
                             //If so, display an appropriate message and disable the column buttons.
                         }
-                        if()//check for tie
+                        if(board.CheckTie())//check for tie
                         {
                             MessageBox.Show("Tie game.");
                         }
+                         board.SwitchTurns();
+                uxLabel.Text = board.Turn.ToString();
                     }
                     else
                     {
                         MessageBox.Show("Column" + "is full");
                         //Dont switch turns
                     }
+                    
 
                     //then switch the displayed turn.
 
