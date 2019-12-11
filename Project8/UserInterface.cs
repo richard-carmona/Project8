@@ -81,16 +81,16 @@ namespace Project8
             {
                 for (int j = 0; j <= box.Length; j++)
                 {
-                    if (//column is not full)
+                    if ()//column is not full
                     {
                         //place a piece of the current color in the clicked column
-                        //then switch the displayed turn.
-                        if (//Check to see if the recent move made the player win or tie)
+                        
+                        if ()//Check to see if the recent move made the player win or tie
                         {
                             MessageBox.Show("wins!");
                             //If so, display an appropriate message and disable the column buttons.
                         }
-                        else
+                        if()//check for tie
                         {
                             MessageBox.Show("Tie game.");
                         }
@@ -100,6 +100,8 @@ namespace Project8
                         MessageBox.Show("Column" + "is full");
                         //Dont switch turns
                     }
+
+                    //then switch the displayed turn.
                 }
             }          
         }

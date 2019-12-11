@@ -88,6 +88,8 @@ namespace Project8
                 }
             }
 
+
+
             for (int j = 0; j < Column; j++)
             {
                 for (int i = 0; i < row - 3; i++)
@@ -103,9 +105,28 @@ namespace Project8
                 }
             }
 
+
+
             for (int i = 0; i < row; i++)
             {
-                for (int j = 0; j < Column - 4; j++)
+                for (int j = 0; j < Column - 3; j++)
+                {
+                    if (grid[i, j] == grid[i, j + 1] && grid[i, j] == grid[i, j + 2] && grid[i, j] == grid[i, j + 3] && grid[i, j] == player)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+
+
+
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < Column - 3; j++)
                 {
                     if (grid[i, j] == grid[i, j + 1] && grid[i, j] == grid[i, j + 2] && grid[i, j] == grid[i, j + 3] && grid[i, j] == player)
                     {
