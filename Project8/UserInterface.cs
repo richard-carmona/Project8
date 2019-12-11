@@ -19,6 +19,9 @@ namespace Project8
     /// </summary>
     public partial class ConnectFour : Form
     {
+
+        public Board board;       
+
         /// <summary>
         /// PictureBox array for the UI
         /// </summary>
@@ -35,7 +38,10 @@ namespace Project8
         public ConnectFour()
         {
             InitializeComponent();
+            board = new Board();
         }
+
+
 
         /// <summary>
         /// Loads the Picture onto the UI
@@ -76,16 +82,22 @@ namespace Project8
         private void ClickColumn(object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
-
-            for (int i = 0; i <= box.Length; i++)
-            {
-                for (int j = 0; j <= box.Length; j++)
-                {
-                    if ()//column is not full
+          
+                    if (board.Move(Convert.ToInt32(clicked.Text)))//column is not full
                     {
-                        //place a piece of the current color in the clicked column
-                        
-                        if ()//Check to see if the recent move made the player win or tie
+                         //place a piece of the current color in the clicked column
+                         
+                    if(board.Turn == PieceColor.red)
+                        {
+                            box[0, Convert.ToInt32(clicked.Text)].Image = Properties.Resources.redCircle;
+                        }
+                    else
+                        {
+                            box[0, Convert.ToInt32(clicked.Text)].Image = Properties.Resources.redCircle;
+                        }
+
+
+                        if (board.IsWinner)//Check to see if the recent move made the player win or tie
                         {
                             MessageBox.Show("wins!");
                             //If so, display an appropriate message and disable the column buttons.
@@ -102,8 +114,8 @@ namespace Project8
                     }
 
                     //then switch the displayed turn.
-                }
-            }          
+                
+                   
         }
 
         /// <summary>

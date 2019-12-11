@@ -140,7 +140,7 @@ namespace Project8
             }
 
             return true;
-        }
+        }    //FIX ME
 
         /// <summary>
         /// returns whether the board is full
@@ -200,13 +200,32 @@ namespace Project8
         /// <returns></returns>
         public bool Move(int col)
         {
+            int row_2 = getRow(col);
             if (IsValidMove(col)) {
+                grid[row_2, col] = Turn;
                 return true;
         }
             else
             {
                 return false;
             }
+        }
+
+        private int getRow(int col)
+        {
+            for(int i = row - 1; i >= 0; i--)
+            {
+                if(grid[i,col] == PieceColor.empty)
+                {
+                    return i;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            return -1;
+
         }
     }
 }
