@@ -135,8 +135,7 @@ namespace Project8
                     if (grid[i, j] != PieceColor.empty)
                     {
                         return false;
-                    }
-                    
+                    }       
                 }
             }
             return true;
@@ -150,7 +149,6 @@ namespace Project8
             if (Turn == PieceColor.black) Turn = PieceColor.red;
 
             else Turn = PieceColor.black;
-
         }
 
         /// <summary>
@@ -204,7 +202,6 @@ namespace Project8
                 }
             }
             return -1;
-
         }
     }
 }
