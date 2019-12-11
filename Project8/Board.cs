@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project8
-{ 
+{
     /// <summary>
     /// enum to holf the turns value
     /// </summary>
@@ -32,7 +32,7 @@ namespace Project8
         /// the array for board
         /// </summary>
         private PieceColor[,] grid;
-        
+
 
         /// <summary>
         /// Constructor for the class
@@ -42,14 +42,14 @@ namespace Project8
             grid = new PieceColor[row, Column];
             Turn = PieceColor.red;
 
-            for(int i = 0; i <= row ; i++)
+            for (int i = 0; i < row; i++)
             {
-                for(int j = 0; j <= Column ; j++)
+                for (int j = 0; j < Column; j++)
                 {
-                    grid [i,j] = PieceColor.empty;
+                    grid[i, j] = PieceColor.empty;
                 }
             }
-    }
+        }
 
         /// <summary>
         /// gets the value of the current turn field
@@ -76,30 +76,25 @@ namespace Project8
         {
             for (int i = 0; i < row; i++)
             {
-                for (int j = 0; j < Column - 3; j++){ 
-                if (grid[i,j] == grid[i, j+1] && grid[i,j] == grid[i,j +2] && grid[i,j] == grid[i,j + 3] && grid[i,j] == player)
+                for (int j = 0; j < Column - 3; j++)
                 {
-                return true;
-                }
-            
-                }
-            }
-
-
-
-            for (int j = 0; j < Column ; j++)
-            {
-                for (int i = 0; i < row - 3; i++)
-                {
-                    if (grid[i, j] == grid[i +1, j] && grid[i, j] == grid[i + 2, j] && grid[i, j] == grid[i + 3, j] && grid[i, j] == player)
+                    if (grid[i, j] == grid[i, j + 1] && grid[i, j] == grid[i, j + 2] && grid[i, j] == grid[i, j + 3] && grid[i, j] == player)
                     {
                         return true;
                     }
-                    
                 }
             }
 
-
+            for (int j = 0; j < Column; j++)
+            {
+                for (int i = 0; i < row - 3; i++)
+                {
+                    if (grid[i, j] == grid[i + 1, j] && grid[i, j] == grid[i + 2, j] && grid[i, j] == grid[i + 3, j] && grid[i, j] == player)
+                    {
+                        return true;
+                    }
+                }
+            }
 
             for (int i = 0; i < row - 3; i++)
             {
@@ -109,11 +104,8 @@ namespace Project8
                     {
                         return true;
                     }
-                   
                 }
             }
-
-
 
             for (int i = row - 1; i < row - 3; i--)
             {
@@ -123,12 +115,12 @@ namespace Project8
                     {
                         return true;
                     }
-                    
+
                 }
             }
 
             return false;
-        }    
+        }
 
         /// <summary>
         /// returns whether the board is full
@@ -136,18 +128,15 @@ namespace Project8
         /// <returns></returns>
         public bool CheckTie()
         {
-            for(int i = 0; i < row; i++)
+            for (int i = 0; i < row; i++)
             {
-                for(int j = 0; j < Column; j++)
+                for (int j = 0; j < Column; j++)
                 {
-                    if (grid[i,j] != PieceColor.empty)
+                    if (grid[i, j] != PieceColor.empty)
                     {
                         return false;
                     }
-                    else
-                    {
-                        return true;
-                    }
+                    
                 }
             }
             return true;
@@ -158,10 +147,10 @@ namespace Project8
         /// </summary>
         public void SwitchTurns()
         {
-            if(Turn == PieceColor.black) Turn = PieceColor.red;
-            
+            if (Turn == PieceColor.black) Turn = PieceColor.red;
+
             else Turn = PieceColor.black;
-            
+
         }
 
         /// <summary>
@@ -171,7 +160,7 @@ namespace Project8
         /// <returns></returns>
         private bool IsValidMove(int col)
         {
-            if (grid[0,col] == PieceColor.empty)
+            if (grid[0, col] == PieceColor.empty)
             {
                 return true;
             }
@@ -189,10 +178,11 @@ namespace Project8
         public bool Move(int col)
         {
             int row_2 = getRow(col);
-            if (IsValidMove(col)) {
+            if (IsValidMove(col))
+            {
                 grid[row_2, col] = Turn;
                 return true;
-        }
+            }
             else
             {
                 return false;
@@ -206,15 +196,11 @@ namespace Project8
         /// <returns></returns>
         private int getRow(int col)
         {
-            for(int i = row - 1; i >= 0; i--)
+            for (int i = row - 1; i >= 0; i--)
             {
-                if(grid[i,col] == PieceColor.empty)
+                if (grid[i, col] == PieceColor.empty)
                 {
                     return i;
-                }
-                else
-                {
-                    return -1;
                 }
             }
             return -1;
