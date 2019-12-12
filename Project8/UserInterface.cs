@@ -161,7 +161,7 @@ namespace Project8
             {
                 for (int j = 0; j < 7 ; j++)
                 {
-                    //board.SwitchTurns();
+                    
                     box[i, j].Image = null;
                     uxButton1.Enabled = true;
                     uxButton2.Enabled = true;
@@ -172,6 +172,15 @@ namespace Project8
                     uxButton7.Enabled = true;
                 }
             }
+            if(board.Turn == PieceColor.red)
+            {
+                uxLabel.Text = "red's turn";
+            }
+            else
+            {
+                uxLabel.Text = "black's turn";
+            }
+
         }
 
         private void UxPictureBox_Click(object sender, EventArgs e)

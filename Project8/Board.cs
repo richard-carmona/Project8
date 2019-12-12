@@ -42,6 +42,7 @@ namespace Project8
             grid = new PieceColor[row, Column];
             Turn = PieceColor.red;
 
+
             for (int i = 0; i < row; i++)
             {
                 for (int j = 0; j < Column; j++)
@@ -107,7 +108,7 @@ namespace Project8
                 }
             }
 
-            for (int i = row - 1; i < row - 3; i--)
+            for (int i = row - 1; i > row - 3; i--)
             {
                 for (int j = 0; j < Column - 3; j++)
                 {
@@ -128,17 +129,18 @@ namespace Project8
         /// <returns></returns>
         public bool CheckTie()
         {
+            bool isTie = true;
             for (int i = 0; i < row; i++)
             {
                 for (int j = 0; j < Column; j++)
                 {
-                    if (grid[i, j] != PieceColor.empty)
+                    if (grid[i, j] == PieceColor.empty)
                     {
-                        return false;
+                        isTie = false;
                     }       
                 }
             }
-            return true;
+            return isTie;
         }
 
         /// <summary>
