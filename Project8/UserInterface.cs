@@ -25,7 +25,7 @@ namespace Project8
         /// <summary>
         /// PictureBox array for the UI
         /// </summary>
-        PictureBox[,] box = new PictureBox[7, 7];
+        PictureBox[,] box = new PictureBox[6, 7];
 
         /// <summary>
         /// Buttons array
@@ -50,13 +50,13 @@ namespace Project8
         /// <param name="e"></param>
         private void ConnectFour_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
-                for (int j = 0; j < 6; j++)
+                for (int j = 0; j < 7; j++)
                 {
                     PictureBox pb = new PictureBox();
-                    pb.Location = new Point(i * 90 + 15, j * 60 + 75);
-                    pb.Size = new Size(68, 68);
+                    pb.Location = new Point( j * 68 + 20, i * 68+ 75);
+                    pb.Size = new Size(60, 60);
                     pb.BorderStyle = BorderStyle.FixedSingle;
                     this.Controls.Add(pb);
                     box[i, j] = pb;
@@ -97,20 +97,20 @@ namespace Project8
                 {
                     if (board.GetColor(i,buttonIndex) == PieceColor.red)
                     {
-                        box[buttonIndex, i].Image = Properties.Resources.redCircle;
-                        box[buttonIndex, i].Refresh();
-                        box[buttonIndex, i].Visible = true;
+                        box[i, buttonIndex].Image = Properties.Resources.redCircle;
+                        box[i, buttonIndex].Refresh();
+                        box[i, buttonIndex].Visible = true;
 
                     }
                     else if(board.GetColor(i, buttonIndex) == PieceColor.black)
                     {
-                        box[buttonIndex, i].Image = Properties.Resources.blackCircle;
-                        box[buttonIndex, i].Refresh();
-                        box[buttonIndex, i].Visible = true;
+                        box[i, buttonIndex].Image = Properties.Resources.blackCircle;
+                        box[i, buttonIndex].Refresh();
+                        box[i, buttonIndex].Visible = true;
                     }
                     else
                     {
-                        box[buttonIndex, i].Image = null;
+                        box[i, buttonIndex].Image = null;
                     }
                 }
 
@@ -123,6 +123,13 @@ namespace Project8
                 if (board.CheckTie())//check for tie
                 {
                     MessageBox.Show("Tie game.");
+                    uxButton1.Enabled = false;
+                    uxButton2.Enabled = false;
+                    uxButton3.Enabled = false;
+                    uxButton4.Enabled = false;
+                    uxButton5.Enabled = false;
+                    uxButton6.Enabled = false;
+                    uxButton7.Enabled = false;
                 }
                 board.SwitchTurns();
                 uxLabel.Text = (board.Turn.ToString() + "'s Turn");
@@ -142,15 +149,16 @@ namespace Project8
         private void UxNewGame_Click(object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
+            board = new Board();
             //board.Turn.ToString() = PieceColor.red;
-            for(int i = 0; i < box.Length; i++)
+            for (int i = 0; i < 6; i++)
             {
-                for (int j = 0; j < box.Length ; j++)
+                for (int j = 0; j < 7 ; j++)
                 {
-                    //if (clicked == uxNewGame){}
+                    box[i, j].Image = null;
                     
-                       // board = new Board();
-                        //board = null;
+                        
+                        
                       
                 }
             }
@@ -162,6 +170,11 @@ namespace Project8
         }
 
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void UxLabel_Click(object sender, EventArgs e)
         {
 
         }
