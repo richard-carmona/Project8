@@ -118,7 +118,7 @@
             // uxButton2
             // 
             this.uxButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxButton2.Location = new System.Drawing.Point(88, 12);
+            this.uxButton2.Location = new System.Drawing.Point(103, 12);
             this.uxButton2.Name = "uxButton2";
             this.uxButton2.Size = new System.Drawing.Size(70, 43);
             this.uxButton2.TabIndex = 7;
@@ -129,7 +129,7 @@
             // uxButton3
             // 
             this.uxButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxButton3.Location = new System.Drawing.Point(164, 12);
+            this.uxButton3.Location = new System.Drawing.Point(190, 12);
             this.uxButton3.Name = "uxButton3";
             this.uxButton3.Size = new System.Drawing.Size(70, 43);
             this.uxButton3.TabIndex = 8;
@@ -140,7 +140,7 @@
             // uxButton4
             // 
             this.uxButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxButton4.Location = new System.Drawing.Point(240, 12);
+            this.uxButton4.Location = new System.Drawing.Point(282, 12);
             this.uxButton4.Name = "uxButton4";
             this.uxButton4.Size = new System.Drawing.Size(70, 43);
             this.uxButton4.TabIndex = 9;
@@ -151,7 +151,7 @@
             // uxButton5
             // 
             this.uxButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxButton5.Location = new System.Drawing.Point(316, 12);
+            this.uxButton5.Location = new System.Drawing.Point(373, 12);
             this.uxButton5.Name = "uxButton5";
             this.uxButton5.Size = new System.Drawing.Size(70, 43);
             this.uxButton5.TabIndex = 10;
@@ -162,7 +162,7 @@
             // uxButton6
             // 
             this.uxButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxButton6.Location = new System.Drawing.Point(392, 12);
+            this.uxButton6.Location = new System.Drawing.Point(463, 12);
             this.uxButton6.Name = "uxButton6";
             this.uxButton6.Size = new System.Drawing.Size(70, 43);
             this.uxButton6.TabIndex = 11;
@@ -173,7 +173,7 @@
             // uxButton7
             // 
             this.uxButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxButton7.Location = new System.Drawing.Point(468, 12);
+            this.uxButton7.Location = new System.Drawing.Point(554, 12);
             this.uxButton7.Name = "uxButton7";
             this.uxButton7.Size = new System.Drawing.Size(70, 43);
             this.uxButton7.TabIndex = 12;
@@ -184,18 +184,18 @@
             // uxLabel
             // 
             this.uxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxLabel.Location = new System.Drawing.Point(12, 540);
+            this.uxLabel.Location = new System.Drawing.Point(12, 496);
             this.uxLabel.Name = "uxLabel";
-            this.uxLabel.Size = new System.Drawing.Size(100, 23);
+            this.uxLabel.Size = new System.Drawing.Size(146, 23);
             this.uxLabel.TabIndex = 13;
-            this.uxLabel.Text = "Turn";
+            this.uxLabel.Text = "Red\'s Turn";
             // 
             // uxNewGame
             // 
             this.uxNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxNewGame.Location = new System.Drawing.Point(387, 520);
+            this.uxNewGame.Location = new System.Drawing.Point(480, 460);
             this.uxNewGame.Name = "uxNewGame";
-            this.uxNewGame.Size = new System.Drawing.Size(146, 43);
+            this.uxNewGame.Size = new System.Drawing.Size(157, 59);
             this.uxNewGame.TabIndex = 14;
             this.uxNewGame.Text = "New Game";
             this.uxNewGame.UseVisualStyleBackColor = true;
@@ -205,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 572);
+            this.ClientSize = new System.Drawing.Size(649, 533);
             this.Controls.Add(this.uxNewGame);
             this.Controls.Add(this.uxLabel);
             this.Controls.Add(this.uxButton7);

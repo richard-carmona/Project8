@@ -25,7 +25,7 @@ namespace Project8
         /// <summary>
         /// PictureBox array for the UI
         /// </summary>
-        PictureBox[,] box = new PictureBox[6, 7];
+        PictureBox[,] box = new PictureBox[7, 7];
 
         /// <summary>
         /// Buttons array
@@ -50,7 +50,7 @@ namespace Project8
         /// <param name="e"></param>
         private void ConnectFour_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 7; i++)
             {
                 for (int j = 0; j < 6; j++)
                 {
@@ -59,7 +59,6 @@ namespace Project8
                     pb.Size = new Size(68, 68);
                     pb.BorderStyle = BorderStyle.FixedSingle;
                     this.Controls.Add(pb);
-                    //pb.Image = Properties.Resources.redCircle;
                     box[i, j] = pb;
                 }
             }
@@ -126,33 +125,13 @@ namespace Project8
                     MessageBox.Show("Tie game.");
                 }
                 board.SwitchTurns();
-                uxLabel.Text = board.Turn.ToString();
+                uxLabel.Text = (board.Turn.ToString() + "'s Turn");
             }
             else
             {
                 MessageBox.Show("Column" + "is full");
                 //Dont switch turns
             }
-
-
-            //then switch the displayed turn.
-
-
-            /*
-             In column click event in GUI:
-            Button clicked = (Button) sender;
-            loop through your array of column buttons
-            check if clicked equals columns[i]
-            if it does, i is the column that was clicked
-
-            call Move at that column (how to find it?)
-            nested loop through all PictureBoxes
-            call GetColor with i and j.
-            if get back PieceColor.red
-                set that PictureBox's Image Properties.Resources.redCircle
-            set their image to be the right circle, 
-            depending on the color from Board
-            */
         }
 
         /// <summary>
@@ -163,11 +142,16 @@ namespace Project8
         private void UxNewGame_Click(object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
-            for (int i = 0; i <= box.Length; i++)
+            //board.Turn.ToString() = PieceColor.red;
+            for(int i = 0; i < box.Length; i++)
             {
-                for (int j = 0; j <= box.Length; j++)
+                for (int j = 0; j < box.Length ; j++)
                 {
-                    //clear the board and reset the current turn to red.
+                    //if (clicked == uxNewGame){}
+                    
+                       // board = new Board();
+                        //board = null;
+                      
                 }
             }
         }
