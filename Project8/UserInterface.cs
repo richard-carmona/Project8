@@ -119,6 +119,13 @@ namespace Project8
                 {
                     MessageBox.Show(board.Turn + " wins!");
                     //If so, display an appropriate message and disable the column buttons.
+                    uxButton1.Enabled = false;
+                    uxButton2.Enabled = false;
+                    uxButton3.Enabled = false;
+                    uxButton4.Enabled = false;
+                    uxButton5.Enabled = false;
+                    uxButton6.Enabled = false;
+                    uxButton7.Enabled = false;
                 }
                 if (board.CheckTie())//check for tie
                 {
@@ -136,7 +143,7 @@ namespace Project8
             }
             else
             {
-                MessageBox.Show("Column" + "is full");
+                MessageBox.Show("Column " + clicked.Text + " is full");
                 //Dont switch turns
             }
         }
@@ -150,16 +157,19 @@ namespace Project8
         {
             Button clicked = (Button)sender;
             board = new Board();
-            //board.Turn.ToString() = PieceColor.red;
             for (int i = 0; i < 6; i++)
             {
                 for (int j = 0; j < 7 ; j++)
                 {
+                    //board.SwitchTurns();
                     box[i, j].Image = null;
-                    
-                        
-                        
-                      
+                    uxButton1.Enabled = true;
+                    uxButton2.Enabled = true;
+                    uxButton3.Enabled = true;
+                    uxButton4.Enabled = true;
+                    uxButton5.Enabled = true;
+                    uxButton6.Enabled = true;
+                    uxButton7.Enabled = true;
                 }
             }
         }

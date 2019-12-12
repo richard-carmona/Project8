@@ -188,7 +188,7 @@
             this.uxLabel.Name = "uxLabel";
             this.uxLabel.Size = new System.Drawing.Size(146, 23);
             this.uxLabel.TabIndex = 13;
-            this.uxLabel.Text = "Red\'s Turn";
+            this.uxLabel.Text = "red\'s turn";
             this.uxLabel.Click += new System.EventHandler(this.UxLabel_Click);
             // 
             // uxNewGame
